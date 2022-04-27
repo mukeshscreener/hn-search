@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AlpineJs</title>
+	<script src="statics/alpinejs@3.js"></script>
+	<script src="statics/utils.js"></script>
+</head>
+
+<body>
+	<!-- content -->
+	<h1>Alpine Js</h1>
+	<div x-data="getResults">
+			<input
+			type="text"
+			x-on:input="fetchResults"
+			placeholder="search ..."
+			name="search"
+			x-model="search">
+			<ul style="list-style-type: none;">
+				<template x-for="item in results">
+					<li>
+						<a x-text="item.title" x-bind:href="item.url"></a>
+					</li>
+				</template>
+			</ul>
+	</div>
+</body>
+</html>
