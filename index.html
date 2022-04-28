@@ -4,11 +4,14 @@
 	<title>AlpineJs</title>
 	<script src="statics/alpinejs@3.js"></script>
 	<script src="statics/utils.js"></script>
+	<link rel="stylesheet" href="statics/normalize.css">
+	<link rel="stylesheet" href="statics/skeleton.css">
+	<link rel="stylesheet" href="statics/style.css">
 </head>
 
 <body>
 	<!-- content -->
-	<h1>Alpine Js</h1>
+	<h1>Hn Search</h1>
 	<div x-data="getResults">
 			<input
 			type="text"
@@ -19,7 +22,7 @@
 			<ul style="list-style-type: none;">
 				<template x-for="item in results">
 					<li>
-						<a x-text="item.title" x-bind:href="item.url"></a>
+						<a target="_blank" x-text="item.title" x-bind:href="item.url"></a>
 					</li>
 				</template>
 			</ul>
