@@ -11,21 +11,26 @@
 
 <body>
 	<!-- content -->
-	<h1>Hn Search</h1>
-	<div x-data="getResults">
+	<div class="center" x-data="getResults">
+		<h1>Hn Search</h1>
+		<div>
 			<input
+			class="width-50"
 			type="text"
 			x-on:input="fetchResults"
 			placeholder="search ..."
 			name="search"
 			x-model="search">
-			<ul style="list-style-type: none;">
-				<template x-for="item in results">
-					<li>
-						<a target="_blank" x-text="item.title" x-bind:href="item.url"></a>
-					</li>
-				</template>
-			</ul>
+			<div class="results initial">
+				<ul style="list-style-type: none;">
+					<template x-for="item in results">
+						<li>
+							<a target="_blank" x-text="item.title" x-bind:href="item.url"></a>
+						</li>
+					</template>
+				</ul>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
